@@ -7,6 +7,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { AppInterceptor } from './helpers/jwt.interceptor';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LayoutModule } from './modules/layout/layout.module';
+import { NZ_I18N } from 'ng-zorro-antd/i18n';
+import { en_US } from 'ng-zorro-antd/i18n';
+import { registerLocaleData } from '@angular/common';
+import en from '@angular/common/locales/en';
+import { FormsModule } from '@angular/forms';
+
+registerLocaleData(en);
 
 @NgModule({
   declarations: [AppComponent],
@@ -15,6 +24,9 @@ import { AppInterceptor } from './helpers/jwt.interceptor';
     AppRoutingModule,
     HttpClientModule,
     TransferHttpCacheModule,
+    BrowserAnimationsModule,
+    LayoutModule,
+    FormsModule,
   ],
   providers: [
     {
@@ -22,6 +34,7 @@ import { AppInterceptor } from './helpers/jwt.interceptor';
       useClass: AppInterceptor,
       multi: true,
     },
+    { provide: NZ_I18N, useValue: en_US },
   ],
 
   bootstrap: [AppComponent],

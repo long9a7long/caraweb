@@ -1,0 +1,146 @@
+@import url("../../../../../styles/colors.less");
+.inner-box {
+  padding: 20px;
+}
+.main-menu-wrapper {
+  & > [nz-row] {
+    width: 100%;
+  }
+}
+[nz-col] {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.left-col__wrapper {
+  text-align: left;
+
+  .inner-box span {
+    i {
+      font-size: 18px;
+      color: #fff;
+    }
+  }
+  .inner-box span:nth-child(2) {
+    padding: 30px;
+  }
+}
+
+.right-col__wrapper {
+  text-align: right;
+
+  .inner-box span {
+    i {
+      font-size: 18px;
+      color: #fff;
+    }
+  }
+  .inner-box span:nth-child(2) {
+    padding: 30px;
+  }
+}
+
+[nz-submenu] > ul {
+  width: 100%;
+}
+
+.menu {
+  width: 100%;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  align-self: center;
+  padding-inline-start: 0;
+  margin-bottom: 0;
+
+  .menu-item {
+    display: inline-flex;
+    padding: 15px 0;
+    border-bottom: 3px solid rgba(255, 255, 255, 0);
+    &:hover {
+      border-bottom: 3px solid @main-color;
+    }
+    a {
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: 600;
+    }
+  }
+}
+.menu-item-wrapper {
+  background-color: #fff;
+  width: 100%;
+  height: 380px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+
+  .row-inner {
+    width: 100%;
+
+    .menu-item-contents {
+      width: 100%;
+      height: 100%;
+      display: none;
+
+      .menu-item-contents-wrapper {
+        flex: 1;
+        height: 100%;
+
+        * {
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  &.show {
+    visibility: visible;
+    opacity: 1;
+
+    .menu-item-contents {
+      &.show {
+        display: block;
+      }
+    }
+  }
+}
+.dark {
+  display: none;
+}
+.light {
+  display: inline;
+
+  &.show-logo {
+    display: none !important;
+  }
+}
+.has-hover:hover,
+.hover-effect {
+  background-color: #fff;
+
+  i[nz-icon] {
+    color: #1b1d1f !important;
+  }
+  .dark {
+    display: inline;
+  }
+  .light {
+    display: none;
+  }
+
+  .menu .menu-item {
+    a {
+      color: #1b1d1f;
+    }
+  }
+}
+.show-logo {
+  display: inline !important;
+}

@@ -1,0 +1,155 @@
+<div nz-row nzJustify="center" class="main-menu-wrapper has-hover"
+  [ngClass]="{'hover-effect': isHaveShowMenuItemContents()}">
+  <div nz-row nzJustify="center">
+    <div nz-col class="gutter-row" [nzSpan]="4" class="left-col__wrapper">
+      <div class="inner-box">
+        <span>
+          <a href="tel:0283818111">
+            <i nz-icon nzType="phone" nzTheme="fill"></i>
+          </a>
+        </span>
+        <span>
+          <a href="#">
+            <i nz-icon nzType="environment" nzTheme="fill"></i>
+          </a>
+        </span>
+        <span>
+          <a href="#">
+            <i nz-icon nzType="search" nzTheme="outline"></i>
+          </a>
+        </span>
+      </div>
+    </div>
+    <div nz-col class="gutter-row" [nzSpan]="16">
+      <div class="inner-box">
+        <a routerLink="\">
+          <img src="https://vinhcara.com/wp-content/uploads/2020/07/logo-NEW-02.png" alt="site-logo" width="110px"
+            class="light" [ngClass]="{'show-logo': isHaveShowMenuItemContents()}">
+          <img src="https://vinhcara.com/wp-content/uploads/2020/06/logo.png" alt="site-logo" class="dark"
+            [ngClass]="{'show-logo': isHaveShowMenuItemContents()}" width="110px">
+        </a>
+      </div>
+    </div>
+    <div nz-col class="gutter-row" [nzSpan]="4" class="right-col__wrapper">
+      <div class="inner-box">
+        <span>
+          <a href="#">
+            <i nz-icon nzType="heart" nzTheme="fill"></i>
+          </a>
+        </span>
+        <span>
+          <a href="#">
+            <nz-badge [nzCount]="5">
+              <i nz-icon nzType="shopping" nzTheme="fill"></i>
+            </nz-badge>
+
+          </a>
+        </span>
+        <span>
+          <a href="#">
+            <i nz-icon nzType="user" nzTheme="outline"></i>
+          </a>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div nz-row nzJustify="center">
+    <ul class="menu">
+      <li class="menu-item"><a>Trang sức đặc
+          biệt</a></li>
+      <li class="menu-item" (mouseenter)="handleShowMenuItem(0)" (mouseleave)="handleHideMenuItem(0)"><a>Trang sức</a>
+      </li>
+      <li class="menu-item" (mouseenter)="handleShowMenuItem(1)" (mouseleave)="handleHideMenuItem(1)"><a>Yêu & thành
+          hôn</a></li>
+      <li class="menu-item" (mouseenter)="handleShowMenuItem(2)" (mouseleave)="handleHideMenuItem(2)"><a>Kim cương</a>
+      </li>
+      <li class="menu-item" (mouseenter)="handleShowMenuItem(3)" (mouseleave)="handleHideMenuItem(3)"><a>Quà tặng</a>
+      </li>
+      <li class="menu-item" (mouseenter)="handleShowMenuItem(4)" (mouseleave)="handleHideMenuItem(4)"><a>Khám phá</a>
+      </li>
+      <li class="menu-item" (mouseenter)="handleShowMenuItem(5)" (mouseleave)="handleHideMenuItem(5)"><a>Về Vĩnh
+          cara</a></li>
+      <li class="menu-item" (mouseenter)="handleShowMenuItem(6)" (mouseleave)="handleHideMenuItem(6)"><a>Chính sách &
+          dịch vụ</a></li>
+      <li class="menu-item" (mouseenter)="handleShowMenuItem(7)" (mouseleave)="handleHideMenuItem(7)"><a>Liên hệ</a>
+      </li>
+      <li class="menu-item" (mouseenter)="handleShowMenuItem(8)" (mouseleave)="handleHideMenuItem(8)"><a>Tin tức</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div nz-row nzJustify="center" class="menu-item-wrapper" [ngClass]="{'show': isHaveShowMenuItemContents()}">
+  <div class="row-inner">
+    <div class="menu-item-contents trang-suc__item"
+      [ngClass]="{'show': isShowMenuItemsContents[0] || this.isShowMenuItems[0]}"
+      (mouseenter)="handleShowMenuItemContents(0)" (mouseleave)="handleHideMenuItemContents(0)">
+      <div class="menu-item-contents-wrapper">
+        <app-trang-suc-mega-menu></app-trang-suc-mega-menu>
+      </div>
+    </div>
+
+    <div class="menu-item-contents yeu-thanh-hon__item"
+      [ngClass]="{'show': isShowMenuItemsContents[1] || this.isShowMenuItems[1]}"
+      (mouseenter)="handleShowMenuItemContents(1)" (mouseleave)="handleHideMenuItemContents(1)">
+      <div class="menu-item-contents-wrapper">
+        <app-yeu-thanh-hon-mega-menu></app-yeu-thanh-hon-mega-menu>
+      </div>
+    </div>
+
+    <div class="menu-item-contents kim-cuong__item"
+      [ngClass]="{'show': isShowMenuItemsContents[2] || this.isShowMenuItems[2]}"
+      (mouseenter)="handleShowMenuItemContents(2)" (mouseleave)="handleHideMenuItemContents(2)">
+      <div class="menu-item-contents-wrapper">
+        <app-kim-cuong-mega-menu></app-kim-cuong-mega-menu>
+      </div>
+    </div>
+
+    <div class="menu-item-contents qua-tang__item"
+      [ngClass]="{'show': isShowMenuItemsContents[3] || this.isShowMenuItems[3]}"
+      (mouseenter)="handleShowMenuItemContents(3)" (mouseleave)="handleHideMenuItemContents(3)">
+      <div class="menu-item-contents-wrapper">
+        <app-qua-tang-mega-menu></app-qua-tang-mega-menu>
+      </div>
+    </div>
+
+    <div class="menu-item-contents kham-pha__item"
+      [ngClass]="{'show': isShowMenuItemsContents[4] || this.isShowMenuItems[4]}"
+      (mouseenter)="handleShowMenuItemContents(4)" (mouseleave)="handleHideMenuItemContents(4)">
+      <div class="menu-item-contents-wrapper">
+        <app-kham-pha-mega-menu></app-kham-pha-mega-menu>
+      </div>
+    </div>
+
+    <div class="menu-item-contents ve-vinh__item"
+      [ngClass]="{'show': isShowMenuItemsContents[5] || this.isShowMenuItems[5]}"
+      (mouseenter)="handleShowMenuItemContents(5)" (mouseleave)="handleHideMenuItemContents(5)">
+      <div class="menu-item-contents-wrapper">
+        <app-ve-vinh-cara-mega-menu></app-ve-vinh-cara-mega-menu>
+      </div>
+    </div>
+
+    <div class="menu-item-contents chinh-sach__item"
+      [ngClass]="{'show': isShowMenuItemsContents[6] || this.isShowMenuItems[6]}"
+      (mouseenter)="handleShowMenuItemContents(6)" (mouseleave)="handleHideMenuItemContents(6)">
+      <div class="menu-item-contents-wrapper">
+        <app-chinh-sach-mega-menu></app-chinh-sach-mega-menu>
+      </div>
+    </div>
+
+    <div class="menu-item-contents lien-he__item"
+      [ngClass]="{'show': isShowMenuItemsContents[7] || this.isShowMenuItems[7]}"
+      (mouseenter)="handleShowMenuItemContents(7)" (mouseleave)="handleHideMenuItemContents(7)">
+      <div class="menu-item-contents-wrapper">
+        <app-lien-he-mega-menu></app-lien-he-mega-menu>
+      </div>
+    </div>
+    <div class="menu-item-contents tin-tuc__item"
+      [ngClass]="{'show': isShowMenuItemsContents[8] || this.isShowMenuItems[8]}"
+      (mouseenter)="handleShowMenuItemContents(8)" (mouseleave)="handleHideMenuItemContents(8)">
+      <div class="menu-item-contents-wrapper">
+        <app-tin-tuc-mega-menu></app-tin-tuc-mega-menu>
+      </div>
+    </div>
+  </div>
+</div>
