@@ -27,6 +27,7 @@
     "@angular/router": "~11.2.11",
     "@nguniversal/express-engine": "11.2.1",
     "express": "^4.15.2",
+    "jquery": "^3.6.0",
     "ng-zorro-antd": "11.4.0",
     "ngx-wooapi": "^11.0.0",
     "rxjs": "~6.6.7",

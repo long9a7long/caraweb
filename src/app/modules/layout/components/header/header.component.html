@@ -1,1 +1,4 @@
-<app-main-header></app-main-header>
+<app-main-header *ngIf="!isScrollDown; else subHeader"></app-main-header>
+<ng-template #subHeader>
+    <app-sub-header></app-sub-header>
+</ng-template>
