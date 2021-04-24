@@ -1,0 +1,10 @@
+<div nz-row>
+  <div nz-col [nzSpan]="10" class="post-image">
+    <a href="#"><img [src]="post.thumbnail_images.thumbnail.url" alt="" srcset="" width="100%"></a>
+  </div>
+  <div nz-col [nzSpan]="14">
+    <h4><a href="#">{{post.title}}</a></h4>
+    <p [innerHTML]="post.excerpt"></p>
+    <p class="read-link"><a href="#">Xem ngay >></a></p>
+  </div>
+</div>

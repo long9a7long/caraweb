@@ -14,3 +14,115 @@
     font-weight: 500;
   }
 }
+.products-section {
+  padding: 40px 20px;
+  max-width: 1280px;
+  margin: 0 auto;
+
+  .slide {
+    padding: 10px;
+  }
+}
+:host ::ng-deep ngx-slick-carousel button.slick-arrow {
+  background-color: #fff;
+
+  &::before {
+    color: rgb(37, 37, 37);
+    font-size: 30px;
+  }
+}
+
+.image-divide-section {
+  img {
+    object-fit: cover;
+  }
+}
+
+.blogs-section {
+  background-color: #272727;
+  padding: 50px 0;
+  [nz-row] {
+    max-width: 1280px;
+    margin: 0 auto;
+    .sub-title {
+      color: #fff;
+      &::before {
+        content: "";
+        width: 50px;
+        height: 1px;
+        background-color: #fff;
+        display: inline-block;
+        margin-right: 10px;
+        vertical-align: middle;
+      }
+    }
+    h2 {
+      color: #fff;
+      font-size: 2em;
+    }
+
+    .right-col {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      p {
+        text-align: right;
+        a {
+          color: #fff;
+          font-size: 1.2em;
+          text-transform: uppercase;
+          text-decoration: underline;
+          text-decoration-color: red;
+        }
+      }
+    }
+  }
+
+  .right-col-blogs {
+    padding-left: 20px;
+  }
+}
+:host ::ng-deep .has-margin {
+  [nz-row] {
+    margin: 20px 0;
+  }
+}
+
+.story-section {
+  padding: 40px 20px;
+  max-width: 1280px;
+  margin: 0 auto;
+
+  [nz-col] {
+    a {
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      width: calc(100% - 15px);
+      height: 100%;
+      left: 0;
+      right: 0;
+      top: 0;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      display: inline-flex;
+      align-self: center;
+      align-items: center;
+      align-self: center;
+      justify-content: center;
+      z-index: 2;
+      color: #fff;
+      font-size: 1.2em;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+    &:hover {
+      a {
+        visibility: visible;
+        opacity: 1;
+        background-color: #27272793;
+      }
+    }
+  }
+}

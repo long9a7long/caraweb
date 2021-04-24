@@ -1,0 +1,12 @@
+<div class="product-item-wrapper">
+  <i nz-icon nzType="heart" nzTheme="outline"></i>
+  <div class="product-item__image-wrapper">
+    <img src="{{ product.images[0].src }}" alt="" width="100%">
+    <a href="#" class="btn-add_to_cart">Thêm vào giỏ hàng</a>
+  </div>
+  <div class="product-item-contents">
+    <p class="product-item__name">{{product.name}}</p>
+    <p class="product-item__price">{{product.price | currency: 'VND':'symbol'}}</p>
+  </div>
+
+</div>

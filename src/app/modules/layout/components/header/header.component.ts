@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {}
 
   @HostListener('window:scroll', ['$event']) // for window scroll events
-  onScroll(event) {
+  onScroll(_) {
     const yPos = document.documentElement.scrollTop || document.body.scrollTop;
     if (yPos > this.yWindowPosition) {
       // Scroll down bigger 100px
@@ -25,7 +25,5 @@ export class HeaderComponent implements OnInit {
     }
     this.yWindowPosition =
       document.documentElement.scrollTop || document.body.scrollTop;
-
-    console.log(this.isScrollDown);
   }
 }
