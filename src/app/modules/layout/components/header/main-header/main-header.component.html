@@ -34,7 +34,9 @@
       <div class="inner-box">
         <span>
           <a href="#">
-            <i nz-icon nzType="heart" nzTheme="fill"></i>
+            <nz-badge [nzCount]="wishListsLength |async">
+              <i nz-icon nzType="heart" nzTheme="fill"></i>
+            </nz-badge>
           </a>
         </span>
         <span>

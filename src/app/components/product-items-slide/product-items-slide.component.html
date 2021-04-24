@@ -1,5 +1,10 @@
 <div class="product-item-wrapper">
-  <i nz-icon nzType="heart" nzTheme="outline"></i>
+  <i nz-icon *ngIf="!isWishListed; else fillHeart" nzType="heart" nzTheme="outline"
+    (click)="addToWishList(product.id)"></i>
+  <ng-template #fillHeart>
+    <i nz-icon nzType="heart" nzTheme="fill" (click)="removeFromWishList(currentIdWishlist)"></i>
+  </ng-template>
+
   <div class="product-item__image-wrapper">
     <img src="{{ product.images[0].src }}" alt="" width="100%">
     <a href="#" class="btn-add_to_cart">Thêm vào giỏ hàng</a>

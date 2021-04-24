@@ -7,6 +7,7 @@ import {
   RetrieveProductsResponse,
   WoocommerceProductsService,
 } from 'ngx-wooapi';
+import { Status } from 'src/app/configs/query';
 import { GetPostReqModel } from 'src/app/models/posts/req/get-posts.req-model';
 import { Post } from 'src/app/models/posts/res/get-post.res-model';
 import { PostsService } from 'src/app/services/posts.service';
@@ -28,7 +29,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     const queryProd: ProductQuery = {
-      status: 'publish',
+      status: Status.publish,
       in_stock: true,
       order: ProductOrder.desc,
       orderby: ProductOrderBy.date,

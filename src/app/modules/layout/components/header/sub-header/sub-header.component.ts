@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+import { Wishlist } from 'src/app/states/wishlist/state/wishlist.model';
+import { WishlistQuery } from 'src/app/states/wishlist/state/wishlist.query';
 
 @Component({
   selector: 'app-sub-header',
@@ -9,9 +13,19 @@ export class SubHeaderComponent implements OnInit {
   isShowMenuItems: boolean[] = [];
   isShowMenuItemsContents: boolean[] = [];
   isHoverEffect: boolean = false;
-  constructor() {}
+  wishLists: Observable<Wishlist[]>;
+  wishListsLength: Observable<number>;
 
-  ngOnInit() {}
+  constructor(private wishListQuery: WishlistQuery) {}
+
+  ngOnInit() {
+    this.wishLists = this.wishListQuery.wishLists$;
+    this.wishListsLength = this.wishListQuery.wishLists$.pipe(
+      map((res) => {
+        return res ? res.length : 0;
+      })
+    );
+  }
 
   handleShowMenuItem(menuItem: number) {
     this.isShowMenuItems[menuItem] = true;
