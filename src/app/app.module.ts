@@ -2,6 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { TransferHttpCacheModule } from '@nguniversal/common';
+import { LoadingBarModule, LOADING_BAR_CONFIG } from '@ngx-loading-bar/core';
+import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
+import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,6 +30,9 @@ registerLocaleData(en);
     BrowserAnimationsModule,
     LayoutModule,
     FormsModule,
+    LoadingBarHttpClientModule, // for HttpClient use:
+    LoadingBarModule, // for Core use:
+    LoadingBarRouterModule,
   ],
   providers: [
     {
@@ -35,6 +41,7 @@ registerLocaleData(en);
       multi: true,
     },
     { provide: NZ_I18N, useValue: en_US },
+    { provide: LOADING_BAR_CONFIG, useValue: { latencyThreshold: 100 } },
   ],
 
   bootstrap: [AppComponent],
