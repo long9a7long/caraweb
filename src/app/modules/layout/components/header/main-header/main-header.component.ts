@@ -21,7 +21,7 @@ export class MainHeaderComponent implements OnInit {
   handleHideMenuItem(menuItem: number) {
     setTimeout(() => {
       this.isShowMenuItems[menuItem] = false;
-    }, 300);
+    }, 10);
   }
 
   handleShowMenuItemContents(menuItem: number) {
