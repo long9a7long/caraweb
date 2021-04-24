@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { Wishlist } from 'src/app/states/wishlist/state/wishlist.model';
-import { WishlistQuery } from 'src/app/states/wishlist/state/wishlist.query';
+import { Wishlist } from 'src/app/states/wishlist/wishlist.model';
+import { WishlistQuery } from 'src/app/states/wishlist/wishlist.query';
 
 @Component({
   selector: 'app-sub-header',

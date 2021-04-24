@@ -1,9 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Product } from 'ngx-wooapi';
-import { map } from 'rxjs/operators';
-import { Wishlist } from 'src/app/states/wishlist/state/wishlist.model';
-import { WishlistQuery } from 'src/app/states/wishlist/state/wishlist.query';
-import { WishlistService } from 'src/app/states/wishlist/state/wishlist.service';
+import { Wishlist } from 'src/app/states/wishlist/wishlist.model';
+import { WishlistQuery } from 'src/app/states/wishlist/wishlist.query';
+import { WishlistService } from 'src/app/states/wishlist/wishlist.service';
 
 @Component({
   selector: 'app-product-items-slide',
