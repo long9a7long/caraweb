@@ -7,6 +7,8 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { ProductItemsSlideModule } from 'src/app/components/product-items-slide/product-items-slide.module';
 import { FeaturedPostItemComponent } from './featured-post-item/featured-post-item.component';
 import { PostItemComponent } from './post-item/post-item.component';
+import { NzEmptyModule } from 'ng-zorro-antd/empty';
+import { NzSpinModule } from 'ng-zorro-antd/spin';
 
 const routes: Routes = [
   {
@@ -22,6 +24,8 @@ const routes: Routes = [
     NzGridModule,
     SlickCarouselModule,
     ProductItemsSlideModule,
+    NzEmptyModule,
+    NzSpinModule,
   ],
   declarations: [HomeComponent, FeaturedPostItemComponent, PostItemComponent],
 })

@@ -19,6 +19,10 @@
 </section>
 <section class="products-section">
     <h2>Sản phẩm mới</h2>
+    <div *ngIf="isLoadingProduct" class="spinning-wrapper">
+        <nz-spin nzSimple [nzSpinning]="isLoadingProduct"></nz-spin>
+    </div>
+    <nz-empty *ngIf="products && products.length===0" [nzNotFoundContent]="null"></nz-empty>
     <div class="products-wrapper" *ngIf="products">
         <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
             <div ngxSlickItem *ngFor="let prod of products" class="slide">
@@ -40,6 +44,10 @@
             <p><a href="#">Các sự kiện khác ></a></p>
         </div>
     </div>
+    <div *ngIf="isLoadingPost" class="spinning-wrapper">
+        <nz-spin nzSimple [nzSpinning]="isLoadingPost"></nz-spin>
+    </div>
+    <nz-empty *ngIf="posts && posts.length===0" [nzNotFoundContent]="null"></nz-empty>
     <div nz-row *ngIf="posts">
         <div nz-col [nzSpan]="12" *ngIf="!!posts[0]">
             <app-featured-post-item [post]="posts[0]"></app-featured-post-item>

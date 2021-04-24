@@ -19,6 +19,8 @@ import { PostsService } from 'src/app/services/posts.service';
 export class HomeComponent implements OnInit {
   products: Product[];
   posts: Post[];
+  isLoadingProduct: boolean = true;
+  isLoadingPost: boolean = true;
   constructor(
     private wooProducs: WoocommerceProductsService,
     private postService: PostsService
@@ -33,12 +35,13 @@ export class HomeComponent implements OnInit {
     };
     this.wooProducs.retrieveProducts(queryProd).subscribe(
       (response: RetrieveProductsResponse) => {
-        console.log(response);
-
         this.products = response.products;
       },
       (err) => {
         console.log(err);
+      },
+      () => {
+        this.isLoadingProduct = false;
       }
     );
 
@@ -46,9 +49,15 @@ export class HomeComponent implements OnInit {
       count: 4,
       page: 1,
     };
-    this.postService
-      .getRecentlyPosts(reqPostModel)
-      .subscribe((res) => (this.posts = res.posts));
+    this.postService.getRecentlyPosts(reqPostModel).subscribe(
+      (res) => (this.posts = res.posts),
+      (err) => {
+        console.log(err);
+      },
+      () => {
+        this.isLoadingPost = false;
+      }
+    );
   }
 
   slideConfig = { slidesToShow: 4, slidesToScroll: 4 };
