@@ -1,4 +1,4 @@
-<app-main-header *ngIf="!isScrollDown; else subHeader"></app-main-header>
+<app-main-header *ngIf="!isScrollDown && !isOtherPage; else subHeader"></app-main-header>
 <ng-template #subHeader>
-    <app-sub-header></app-sub-header>
+    <app-sub-header [ngClass]="{'isSticky': !isOtherPage || isScrollDown}"></app-sub-header>
 </ng-template>

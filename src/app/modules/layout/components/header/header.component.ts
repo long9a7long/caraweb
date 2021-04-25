@@ -1,4 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
+import { RouterName } from 'src/app/configs/route';
 
 @Component({
   selector: 'app-header',
@@ -8,9 +10,18 @@ import { Component, HostListener, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
   yWindowPosition: number = 0;
   isScrollDown: boolean = false;
-  constructor() {}
+  isOtherPage: boolean = true;
+  constructor(private router: Router) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.router.events.subscribe((val) => {
+      // see also
+      const currentURL = (val as NavigationEnd).url;
+      if (currentURL === '/' || currentURL === '/' + RouterName.home) {
+        this.isOtherPage = false;
+      }
+    });
+  }
 
   @HostListener('window:scroll', ['$event']) // for window scroll events
   onScroll(_) {
