@@ -16,8 +16,14 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
     this.router.events.subscribe((val) => {
       const currentURL = (val as NavigationEnd).url;
-      if (currentURL === '/' || currentURL === '/' + RouterName.home) {
+
+      if (
+        (currentURL && currentURL === '/') ||
+        currentURL === '/' + RouterName.home
+      ) {
         this.isOtherPage = false;
+      } else if (currentURL) {
+        this.isOtherPage = true;
       }
     });
   }
