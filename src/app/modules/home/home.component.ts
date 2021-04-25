@@ -36,6 +36,8 @@ export class HomeComponent implements OnInit {
     };
     this.wooProducs.retrieveProducts(queryProd).subscribe(
       (response: RetrieveProductsResponse) => {
+        console.log(response);
+
         this.products = response.products;
       },
       (err) => {

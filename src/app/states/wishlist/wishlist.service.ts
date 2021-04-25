@@ -24,9 +24,7 @@ export class WishlistService {
     let wishListStored = this.localStorageService.getItem(
       LOCAL_STORAGE_KEY.WISH_LIST_KEY
     ) as Wishlist[];
-
     if (wishListStored && Object.keys(wishListStored).length !== 0) {
-      this.wishlistStore.add(wishlist);
       if (
         wishListStored.findIndex(
           (e) =>
@@ -36,6 +34,7 @@ export class WishlistService {
               e.variation_id === wishlist.variation_id)
         ) === -1
       ) {
+        this.wishlistStore.add(wishlist);
         let wishlistArr = [...wishListStored, wishlist];
 
         this.localStorageService.setItem(
@@ -44,6 +43,7 @@ export class WishlistService {
         );
       }
     } else {
+      this.wishlistStore.add(wishlist);
       this.localStorageService.setItem(LOCAL_STORAGE_KEY.WISH_LIST_KEY, [
         wishlist,
       ]);
