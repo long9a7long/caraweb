@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Product } from 'ngx-wooapi';
+import { GlobalConfig } from 'src/app/configs/global-const';
 import { Wishlist } from 'src/app/states/wishlist/wishlist.model';
 import { WishlistQuery } from 'src/app/states/wishlist/wishlist.query';
 import { WishlistService } from 'src/app/states/wishlist/wishlist.service';
@@ -11,6 +12,7 @@ import { WishlistService } from 'src/app/states/wishlist/wishlist.service';
 })
 export class ProductItemsSlideComponent implements OnInit {
   @Input() product: Product;
+  defaultImage = GlobalConfig.defaultLazyLoadingImage;
   isWishListed: boolean;
   currentIdWishlist: number;
   constructor(

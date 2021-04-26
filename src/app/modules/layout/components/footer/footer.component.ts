@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GlobalConfig } from 'src/app/configs/global-const';
 
 @Component({
   selector: 'app-footer',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.less'],
 })
 export class FooterComponent implements OnInit {
+  defaultImage = GlobalConfig.defaultLazyLoadingImage;
   constructor() {}
 
   ngOnInit() {}

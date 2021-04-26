@@ -21,6 +21,11 @@ import { LienHeMegaMenuComponent } from './components/header/shared/lien-he-mega
 import { QuaTangMegaMenuComponent } from './components/header/shared/qua-tang-mega-menu/qua-tang-mega-menu.component';
 import { TinTucMegaMenuComponent } from './components/header/shared/tin-tuc-mega-menu/tin-tuc-mega-menu.component';
 import { VeVinhCaraMegaMenuComponent } from './components/header/shared/ve-vinh-cara-mega-menu/ve-vinh-cara-mega-menu.component';
+import {
+  LazyLoadImageModule,
+  LAZYLOAD_IMAGE_HOOKS,
+  ScrollHooks,
+} from 'ng-lazyload-image';
 
 @NgModule({
   imports: [
@@ -30,6 +35,7 @@ import { VeVinhCaraMegaMenuComponent } from './components/header/shared/ve-vinh-
     NzIconModule,
     NzBadgeModule,
     NzMenuModule,
+    LazyLoadImageModule,
   ],
   declarations: [
     LayoutComponent,
@@ -49,5 +55,6 @@ import { VeVinhCaraMegaMenuComponent } from './components/header/shared/ve-vinh-
     VeVinhCaraMegaMenuComponent,
   ],
   exports: [LayoutComponent],
+  providers: [{ provide: LAZYLOAD_IMAGE_HOOKS, useClass: ScrollHooks }],
 })
 export class LayoutModule {}

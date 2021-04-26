@@ -6628,6 +6628,13 @@ next-tick@~1.0.0:
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
   integrity sha1-yobR/ogoFpsBICCOPchCS524NCw=
 
+ng-lazyload-image@^9.1.0:
+  version "9.1.0"
+  resolved "https://registry.yarnpkg.com/ng-lazyload-image/-/ng-lazyload-image-9.1.0.tgz#2f887b85ef5829565a0fc875a66f568d7c3e2b32"
+  integrity sha512-ZdfCXMTaehfzxcSRRThpz9YZbEA+8LPA086Od6JiylrGj0yNM7Aq830A1x6NE/M8o2VuVq93emH9m8T6SFBHlA==
+  dependencies:
+    tslib "^2.0.0"
+
 ng-zorro-antd@11.4.0:
   version "11.4.0"
   resolved "https://registry.yarnpkg.com/ng-zorro-antd/-/ng-zorro-antd-11.4.0.tgz#480e89567b0bf243f20fb47b7d8b78eccd3ca2e9"
@@ -6638,6 +6645,11 @@ ng-zorro-antd@11.4.0:
     date-fns "^2.10.0"
     resize-observer-polyfill "^1.5.1"
     tslib "^2.0.0"
+
+ngx-image-zoom@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/ngx-image-zoom/-/ngx-image-zoom-0.6.0.tgz#643dd775c62cf7b4845033bf4566c21f89c20a37"
+  integrity sha512-XWuC+bHvYr02C7TcnkK7Dv4BgohTt59sJNaaKRJ6p0js8tYuZdO0kiKVYgTBBctMuAd5hzXbbZgCjrmeG1Pmdw==
 
 ngx-slick-carousel@^0.5.1:
   version "0.5.1"

@@ -1,7 +1,7 @@
 <section class="sub-footer">
-  <img
-    src="https://vinhcara.com/wp-content/uploads/elementor/thumbs/logo-NEW-02-p1leaoedoec6pop11ql6zawl99hxcuhltjd42m21m8.png"
-    alt="vinhcara-logo" width="120px">
+  <img [defaultImage]="defaultImage"
+    [lazyLoad]="'https://vinhcara.com/wp-content/uploads/elementor/thumbs/logo-NEW-02-p1leaoedoec6pop11ql6zawl99hxcuhltjd42m21m8.png'"
+    [offset]="100" alt="vinhcara-logo" width="120px">
 </section>
 <footer>
   <div class="about-wrapper">
@@ -61,7 +61,8 @@
         <i nz-icon nzType="up" nzTheme="outline"></i>
       </span>
     </div>
-    <div class="chung-nhan__img"><img src="https://vinhcara.com/wp-content/uploads/2020/06/dathongbao-1-600x228.png"
+    <div class="chung-nhan__img"><img [defaultImage]="defaultImage"
+        [lazyLoad]="'https://vinhcara.com/wp-content/uploads/2020/06/dathongbao-1-600x228.png'" [offset]="100"
         alt="chung-nhan" width="180px"></div>
     <p class="name-org">CÔNG TY TNHH VĨNH CARA DIAMOND JEWELRY</p>
     <p class="org-info-text">406 Võ Văn Tần, Phường 5, Quận 3, TP.HCM. Hotline: 089.8888.406 – 028.3818.1111 – Mail:

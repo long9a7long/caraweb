@@ -47,7 +47,9 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(
     FormsModule,
     LoadingBarHttpClientModule, // for HttpClient use:
     LoadingBarModule, // for Core use:
-    LoadingBarRouterModule, environment.production ? [] : AkitaNgDevtools.forRoot(), AkitaNgRouterStoreModule,
+    LoadingBarRouterModule,
+    environment.production ? [] : AkitaNgDevtools.forRoot(),
+    AkitaNgRouterStoreModule,
   ],
   providers: [
     {
@@ -57,7 +59,10 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(
     },
     { provide: NZ_I18N, useValue: en_US },
     { provide: LOADING_BAR_CONFIG, useValue: { latencyThreshold: 100 } },
-    { provide: NG_ENTITY_SERVICE_CONFIG, useValue: { baseUrl: 'https://jsonplaceholder.typicode.com' }},
+    {
+      provide: NG_ENTITY_SERVICE_CONFIG,
+      useValue: { baseUrl: 'https://jsonplaceholder.typicode.com' },
+    },
   ],
 
   bootstrap: [AppComponent],

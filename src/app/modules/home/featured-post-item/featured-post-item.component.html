@@ -1,6 +1,6 @@
 <div class="blog-item-wrapper">
   <div class="blog-item__image">
-    <img [src]="post.thumbnail" [alt]="post.title" width="100%">
+    <img [defaultImage]="defaultImage" [offset]="100" [lazyLoad]="post.thumbnail" [alt]="post.title" width="100%">
   </div>
   <div class="blog-item__contents">
     <h3><a href="#">{{post.title}}</a></h3>

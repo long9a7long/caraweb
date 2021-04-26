@@ -7,6 +7,7 @@ import {
   RetrieveProductsResponse,
   WoocommerceProductsService,
 } from 'ngx-wooapi';
+import { GlobalConfig } from 'src/app/configs/global-const';
 import { Status } from 'src/app/configs/query';
 import { GetPostReqModel } from 'src/app/models/posts/req/get-posts.req-model';
 import { Post } from 'src/app/models/posts/res/get-post.res-model';
@@ -18,6 +19,7 @@ import { PostsService } from 'src/app/services/posts.service';
   styleUrls: ['./home.component.less'],
 })
 export class HomeComponent implements OnInit {
+  defaultImage = GlobalConfig.defaultLazyLoadingImage;
   products: Product[];
   posts: Post[];
   isLoadingProduct: boolean = true;

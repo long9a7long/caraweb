@@ -1,3 +1,3 @@
 export enum GlobalConfig {
-  defaultLazyLoadingImage = '../../assets/images/no-image.png',
+  defaultLazyLoadingImage = '../../../assets/images/no-image.png',
 }

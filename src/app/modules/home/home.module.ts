@@ -9,6 +9,7 @@ import { FeaturedPostItemComponent } from './featured-post-item/featured-post-it
 import { PostItemComponent } from './post-item/post-item.component';
 import { NzEmptyModule } from 'ng-zorro-antd/empty';
 import { NzSpinModule } from 'ng-zorro-antd/spin';
+import { LazyLoadImageModule } from 'ng-lazyload-image';
 
 const routes: Routes = [
   {
@@ -26,6 +27,7 @@ const routes: Routes = [
     ProductItemsSlideModule,
     NzEmptyModule,
     NzSpinModule,
+    LazyLoadImageModule,
   ],
   declarations: [HomeComponent, FeaturedPostItemComponent, PostItemComponent],
 })
